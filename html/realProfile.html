@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./realProfile.css" /> -->
+    <link rel="stylesheet" href="../selectPage/realProfile.css" />
+    <!-- 모달 css -->
+    <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
+    <!-- <link rel="stylesheet" href="../mainpage/wave/css/wave.css" /> -->
+    <link rel="stylesheet" href="../mainpage/wave/css/wave.css" />
+
+    <link rel="stylesheet" href="../mainpage/wave/css/modals.css" />
+    <link rel="stylesheet" href="../mainpage/select-page/css/header.css" />
+    <link rel="stylesheet" href="../mainpage/select-page/css/select.css" />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/baf7824541.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="../mainpage/wave/js/search.js"></script>
+    <script src="../item.json"></script>
+    <!-- 모달 js -->
+    <script defer src="../mainpage/wave/js/modal.js"></script>
+    <script defer src="../mainpage/select-page/js/header.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="leftBox">
+        <div class="homeIcon">
+          <a class="homeBtn" href="./index.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+        </div>
+        <div class="searchWrap">
+          <!-- 검색창 -->
+          <div class="inputWrap">
+            <input class="searchInput" type="text" placeholder="노래 검색" />
+            <div class="searchIconWrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+
+          <!-- 숨겨진 검색 결과 -->
+          <div class="searchResult">
+            <!-- 랭크 1~5 -->
+            <div class="chartRank">
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+            </div>
+
+            <!-- 검색 결과 -->
+            <div class="music">
+              <!-- <div class="musicNoResult">
+                <p>검색결과가 없습니다.</p>
+              </div> -->
+            </div>
+            <div class="singer">
+              <!-- <div class="singerNoResult">
+                <p>검색결과가 없습니다.</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightBox">
+        <div class="qrIcon">
+          <a class="qrBtn" href="#">
+            <i class="fa-solid fa-qrcode modalBtn"></i>
+          </a>
+        </div>
+        <div class="fullScreenIcon">
+          <a class="fullBtn" href="#">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="left-container">
+        <div class="chan_left on">
+          <div class="left_content">
+            <div class="profile_name">Lee chan ho</div>
+            <div class="profile_content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              necessitatibus. Velit est fugiat ipsam possimus debitis
+              voluptatibus voluptate vitae temporibus consectetur ipsum. Nihil,
+              excepturi? Animi beatae doloribus quaerat earum pariatur.
+            </div>
+            <div class="profile_btn">
+              <a
+                href="https://www.notion.so/Lee-Chan-ho-e3810ba0e3784571b665e2057f7d0dca"
+                class="notion_btn"
+                >NOTION</a
+              >
+              <a href="https://kong8361.tistory.com/" class="blog_btn">BLOG</a>
+            </div>
+          </div>
+        </div>
+        <div class="hee_left">
+          <div class="left_content">
+            <div class="profile_name">Cho sung hee</div>
+            <div class="profile_content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              necessitatibus. Velit est fugiat ipsam possimus debitis
+              voluptatibus voluptate vitae temporibus consectetur ipsum. Nihil,
+              excepturi? Animi beatae doloribus quaerat earum pariatur.
+            </div>
+            <div class="profile_btn">
+              <a href="" class="notion_btn">NOTION</a>
+              <a href="" class="blog_btn">BLOG</a>
+            </div>
+          </div>
+        </div>
+        <div class="song_left">
+          <div class="left_content">
+            <div class="profile_name">Song min young</div>
+            <div class="profile_content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              necessitatibus. Velit est fugiat ipsam possimus debitis
+              voluptatibus voluptate vitae temporibus consectetur ipsum. Nihil,
+              excepturi? Animi beatae doloribus quaerat earum pariatur.
+            </div>
+            <div class="profile_btn">
+              <a href="" class="notion_btn">NOTION</a>
+              <a href="" class="blog_btn">BLOG</a>
+            </div>
+          </div>
+        </div>
+        <div class="joon_left">
+          <div class="left_content">
+            <div class="profile_name">Kim ho joon</div>
+            <div class="profile_content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              necessitatibus. Velit est fugiat ipsam possimus debitis
+              voluptatibus voluptate vitae temporibus consectetur ipsum. Nihil,
+              excepturi? Animi beatae doloribus quaerat earum pariatur.
+            </div>
+            <div class="profile_btn">
+              <a href="" class="notion_btn">NOTION</a>
+              <a href="" class="blog_btn">BLOG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-container">
+        <!-- right -->
+        <div class="chan_right on">
+          <div class="content_img">이찬호 페이지</div>
+        </div>
+        <div class="hee_right">
+          <div class="content_img">
+            <img src="../selectPage/img/csh_img.png" alt="csh_page" />
+          </div>
+        </div>
+        <div class="song_right">
+          <div class="content_img">송민영 페이지</div>
+        </div>
+        <div class="joon_right">
+          <div class="content_img">김호준 페이지</div>
+        </div>
+        <!-- BTN -->
+        <div class="btn_right">
+          <div class="btn btn_chan btn_active"></div>
+          <div class="btn btn_hee"></div>
+          <div class="btn btn_song"></div>
+          <div class="btn btn_joon"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <div class="modal-title">
+            <a href="#" id="closeBtn"
+              ><i class="fa-solid fa-circle-xmark"></i
+            ></a>
+            <a href="#"><i class="fa-solid fa-folder-open"></i></a>
+            <span class="textContent">% Welcome to KDT#Log terminal! %</span>
+          </div>
+        </div>
+        <section class="cmd">
+          <div class="inner">
+            <!-- <div class="welcome">% Welcome to KDT#Log terminal! %</div> -->
+            <div class="line1">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - -
+            </div>
+            <div class="command">COMMANDS</div>
+            <div class="commands-line">
+              <div>whoami</div>
+              <div>pwd</div>
+              <div>exit</div>
+              <div>ls</div>
+              <div>cd</div>
+              <div>clear</div>
+            </div>
+            <div class="line2">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - -
+            </div>
+            <br />
+            <div id="empty" class="empty"></div>
+
+            <div class="log">
+              <div class="log-1">
+                <span>ch@</span>
+                <span>:</span>
+                <span>MacBookAir ~ </span>
+                <span>%&nbsp;</span>
+              </div>
+              <input type="text" class="input" onkeyup="fnEnterkey();" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script>
+      // left_content
+      const chan_left = document.querySelector(".chan_left");
+      const hee_left = document.querySelector(".hee_left");
+      const song_left = document.querySelector(".song_left");
+      const joon_left = document.querySelector(".joon_left");
+
+      //배열
+      const left_container = document.querySelector(".left-container");
+      const leftContent = left_container.querySelectorAll("div");
+      console.log(leftContent);
+      // const leftContent = left_container.querySelectorAll("div");
+      // console.log(leftContent);
+
+      // 버튼
+      const btn_chan = document.querySelector(".btn_chan");
+      const btn_hee = document.querySelector(".btn_hee");
+      const btn_song = document.querySelector(".btn_song");
+      const btn_joon = document.querySelector(".btn_joon");
+
+      // right_content
+      const chan_right = document.querySelector(".chan_right");
+      const hee_right = document.querySelector(".hee_right");
+      const song_right = document.querySelector(".song_right");
+      const joon_right = document.querySelector(".joon_right");
+
+      btn_chan.addEventListener("click", function () {
+        // left_content
+        song_left.classList.remove("on");
+        hee_left.classList.remove("on");
+        joon_left.classList.remove("on");
+        chan_left.classList.add("on");
+        // right content
+        song_right.classList.remove("on");
+        hee_right.classList.remove("on");
+        joon_right.classList.remove("on");
+        chan_right.classList.add("on");
+        // btn_content
+        btn_chan.classList.add("btn_active");
+        btn_hee.classList.remove("btn_active");
+        btn_song.classList.remove("btn_active");
+        btn_joon.classList.remove("btn_active");
+      });
+      btn_hee.addEventListener("click", function () {
+        // left_content
+        chan_left.classList.remove("on");
+        song_left.classList.remove("on");
+        joon_left.classList.remove("on");
+        hee_left.classList.add("on");
+        // right_content
+        chan_right.classList.remove("on");
+        song_right.classList.remove("on");
+        joon_right.classList.remove("on");
+        hee_right.classList.add("on");
+        // btn_content
+        btn_chan.classList.remove("btn_active");
+        btn_hee.classList.add("btn_active");
+        btn_song.classList.remove("btn_active");
+        btn_joon.classList.remove("btn_active");
+      });
+      btn_song.addEventListener("click", function () {
+        // left_content
+        chan_left.classList.remove("on");
+        hee_left.classList.remove("on");
+        joon_left.classList.remove("on");
+        song_left.classList.add("on");
+        // right_content
+        chan_right.classList.remove("on");
+        hee_right.classList.remove("on");
+        joon_right.classList.remove("on");
+        song_right.classList.add("on");
+        // btn_content
+        btn_chan.classList.remove("btn_active");
+        btn_hee.classList.remove("btn_active");
+        btn_song.classList.add("btn_active");
+        btn_joon.classList.remove("btn_active");
+      });
+      btn_joon.addEventListener("click", function () {
+        // left_content
+        chan_left.classList.remove("on");
+        hee_left.classList.remove("on");
+        song_left.classList.remove("on");
+        joon_left.classList.add("on");
+        // right_content
+        chan_right.classList.remove("on");
+        hee_right.classList.remove("on");
+        song_right.classList.remove("on");
+        joon_right.classList.add("on");
+        // btn_content
+        btn_chan.classList.remove("btn_active");
+        btn_hee.classList.remove("btn_active");
+        btn_song.classList.remove("btn_active");
+        btn_joon.classList.add("btn_active");
+      });
+    </script>
+  </body>
+</html>

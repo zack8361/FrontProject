@@ -1,0 +1,82 @@
+.cmd {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.cmd .inner .welcome {
+  color: rgb(128, 189, 255);
+  font-weight: 500 !important;
+}
+
+.cmd .inner .line1 {
+  color: rgb(128, 189, 255);
+  font-weight: 500 !important;
+}
+
+.cmd .inner .command {
+  color: rgb(128, 189, 255);
+  font-weight: 500 !important;
+}
+.cmd .inner .line2 {
+  color: rgb(128, 189, 255);
+  font-weight: 500 !important;
+}
+/* LOG 부분 */
+.cmd .inner .log {
+  display: flex;
+  margin-top: 5px;
+
+  align-items: center;
+}
+.empty {
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 1.5;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  max-height: 50%;
+}
+.cmd .inner .log .input {
+  width: 400px;
+  border: white;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.cmd .inner .log .input:focus {
+  border: 1px solid beige;
+  width: 400px;
+  outline: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.cmd .inner .log .log-1 > span:nth-child(1) {
+  color: rgb(18, 184, 134);
+}
+.cmd .inner .log .log-1 > span:nth-child(2) {
+  color: rgba(0, 0, 0, 0.5);
+}
+.cmd .inner .log .log-1 > span:nth-child(3) {
+  color: rgb(18, 184, 134);
+}
+.cmd .inner .log .log-1 > span:nth-child(4) {
+  margin-right: 10px;
+  color: rgb(18, 184, 134);
+}
+.cmd .inner .commands-line > div:nth-child(1) {
+  margin-top: 10px;
+}
+.cmd .inner .commands-line > div {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+}
+.cmd .inner .commands-line > div:nth-child(6) {
+  margin-bottom: 10px;
+}

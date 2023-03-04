@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스와이프 팀원소개</title>
+    <style></style>
+    <!-- 스와이프 stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- modal -->
+    <link rel="stylesheet" href="./modal.css" />
+    <!-- Header -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- 스와이프 script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/b4e1a12ac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./modal.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="#"><i class="fa-solid fa-qrcode"></i></a>
+        <a href="#"
+          ><i class="fa-solid fa-up-right-and-down-left-from-center"></i
+        ></a>
+      </div>
+    </header>
+    <div class="wrap">
+      <h1><span></span></h1>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="inner">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            sed nostrum labore ullam iste recusandae quidem, architecto eos
+            voluptate incidunt nulla praesentium nihil perferendis et corrupti
+            commodi culpa doloribus magnam.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            sed nostrum labore ullam iste recusandae quidem, architecto eos
+            voluptate incidunt nulla praesentium nihil perferendis et corrupti
+            commodi culpa doloribus magnam.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            sed nostrum labore ullam iste recusandae quidem, architecto eos
+            voluptate incidunt nulla praesentium nihil perferendis et corrupti
+            commodi culpa doloribus magnam.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="inner">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            sed nostrum labore ullam iste recusandae quidem, architecto eos
+            voluptate incidunt nulla praesentium nihil perferendis et corrupti
+            commodi culpa doloribus magnam.
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <div class="modal-title">
+            <a href="#" id="closeBtn"
+              ><i class="fa-solid fa-circle-xmark"></i
+            ></a>
+            <a href="#"><i class="fa-solid fa-folder-open"></i></a>
+            <span class="textContent">% Welcome to KDT#Log terminal! %</span>
+          </div>
+        </div>
+        <section class="cmd">
+          <div class="inner">
+            <!-- <div class="welcome">% Welcome to KDT#Log terminal! %</div> -->
+            <div class="line1">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - -
+            </div>
+            <div class="command">COMMANDS</div>
+            <div class="commands-line">
+              <div>whoami</div>
+              <div>pwd</div>
+              <div>exit</div>
+              <div>ls</div>
+              <div>cd</div>
+              <div>clear</div>
+            </div>
+            <div class="line2">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - -
+            </div>
+            <br />
+            <div id="empty" class="empty"></div>
+
+            <div class="log">
+              <div class="log-1">
+                <span>ch@</span>
+                <span>:</span>
+                <span>MacBookAir ~ </span>
+                <span>%&nbsp;</span>
+              </div>
+              <input type="text" class="input" onkeyup="fnEnterkey();" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      var swiper = new Swiper(".wrap", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: "auto",
+        spaceBetween: 90,
+        loop: true,
+        centeredSlides: true,
+        speed: 1000,
+        direction: "horizontal",
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: -100,
+          depth: 30,
+          modifier: 1,
+          slideShadows: false,
+        },
+      });
+    </script>
+  </body>
+</html>

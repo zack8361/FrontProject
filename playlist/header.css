@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid whitesmoke;
+}
+.navbar .leftBox {
+  display: flex;
+  padding-left: 40px;
+  align-items: center;
+}
+.navbar .leftBox .homeIcon {
+  font-size: 28px;
+  padding-right: 30px;
+}
+.navbar .leftBox .searchWrap {
+  z-index: 9999;
+  position: relative;
+}
+.navbar .leftBox .searchWrap .inputWrap {
+  height: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid darkgray;
+  border-radius: 15px;
+  width: 280px;
+}
+.navbar .leftBox .searchWrap .inputWrap .searchInput {
+  outline: none;
+  display: block;
+  border: none;
+  margin-left: 10px;
+  width: 220px;
+  height: 85%;
+  font-size: 15px;
+  background-color: transparent;
+}
+.navbar .leftBox .searchWrap .inputWrap .searchIconWrap {
+  align-items: center;
+}
+.navbar .leftBox .searchWrap .inputWrap .searchIconWrap .fa-solid {
+  display: block;
+  font-size: 18px;
+  color: darkgray;
+  margin-left: 10px;
+}
+.navbar .leftBox .searchWrap .searchResult.show {
+  display: block;
+}
+.navbar .leftBox .searchWrap .searchResult::-webkit-scrollbar {
+  display: none;
+}
+.navbar .leftBox .searchWrap .searchResult {
+  display: none;
+  max-height: 350px;
+  overflow: scroll;
+  position: absolute;
+  width: 280px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid darkgray;
+  background-color: white;
+  border-radius: 15px;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank.hide {
+  display: none;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  display: block;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank:hover {
+  opacity: 1.1;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank .rankImgWrap {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  margin-right: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank .rankImgWrap .rankImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank .rankNumber {
+  font-weight: 600;
+  width: 20px;
+  text-align: center;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank .musicName {
+  width: 105px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .leftBox .searchWrap .searchResult .chartRank .rank .artistName {
+  color: darkgray;
+  width: 90px;
+  padding-left: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .leftBox .searchWrap .searchResult .music.hide {
+  display: none;
+}
+.navbar .leftBox .searchWrap .searchResult .music {
+  display: block;
+  font-size: 14px;
+  color: darkgray;
+  overflow: scroll;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  display: flex;
+  height: 45px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap:hover {
+  opacity: 1.1;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap .resultAlbumCover {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  margin-right: 20px;
+  margin-left: 2px;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap .resultAlbumCover .resultAlbumImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap .resultMusicName {
+  width: 105px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  color: black;
+}
+.navbar .leftBox .searchWrap .searchResult .music .musicResultWrap .resultArtistName {
+  color: darkgray;
+  width: 90px;
+  padding-left: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .leftBox .searchWrap .searchResult .singer.hide {
+  display: none;
+}
+.navbar .leftBox .searchWrap .searchResult .singer {
+  display: block;
+  font-size: 14px;
+  color: darkgray;
+  overflow: scroll;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  display: flex;
+  height: 45px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap:hover {
+  opacity: 1.1;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap .resultSingerAlbumCover {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  margin-right: 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  margin-right: 20px;
+  margin-left: 2px;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap .resultSingerAlbumCover .resultSingerAlbumImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap .resultSingerMusicName {
+  width: 105px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  color: black;
+}
+.navbar .leftBox .searchWrap .searchResult .singer .singerResultWrap .resultSingerArtistName {
+  color: darkgray;
+  width: 90px;
+  padding-left: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.navbar .rightBox {
+  font-size: 24px;
+  width: 100px;
+  justify-content: space-around;
+  display: flex;
+  margin-right: 40px;
+}
+.navbar .rightBox .qrIcon {
+  font-size: 28px;
+}
+
+.noResult.show {
+  display: block;
+}
+
+.noResult {
+  display: none;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  color: darkgray;
+}/*# sourceMappingURL=header.css.map */

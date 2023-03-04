@@ -1,0 +1,412 @@
+@charset "UTF-8";
+.select-page {
+  /* transform: scaleY(1); */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: all 1s;
+}
+
+/* 카드 */
+.flip-card-container {
+  --hue: 150;
+  --primary: hsl(var(--hue), 50%, 50%);
+  --white-1: hsl(0, 0%, 90%);
+  --white-2: hsl(0, 0%, 80%);
+  --dark: hsl(var(--hue), 25%, 10%);
+  --grey: hsl(0, 0%, 50%);
+  /* 카드 넓이 */
+  width: 230px;
+  height: 370px;
+  margin: 40px;
+  perspective: 1000px; /* 원근법 */
+}
+
+.flip-card-container .flip-card {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.6s 0.1s;
+}
+
+/* hover와 focus-within : 회전  */
+.flip-card-container:hover .flip-card,
+.flip-card-container:focus-within .flip-card {
+  transform: rotateY(180deg);
+}
+
+/* 첫번째 카드 앞 뒤 */
+.flip-card-container .flip-card .card-music-front,
+.flip-card-container .flip-card .card-music-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: #9dbc96;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 첫번째 카드 앞 */
+.flip-card-container .flip-card .card-music-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* 첫번째 카드 뒤 */
+.flip-card-container .flip-card .card-music-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* 두번째 카드 앞 뒤 */
+.flip-card-container .flip-card .card-profile-front,
+.flip-card-container .flip-card .card-profile-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: #7db9b6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 두번째 카드 앞 */
+.flip-card-container .flip-card .card-profile-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* 두번째 카드 뒤 */
+.flip-card-container .flip-card .card-profile-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* 세번째 카드 앞 뒤 */
+.flip-card-container .flip-card .card-ranking-front,
+.flip-card-container .flip-card .card-ranking-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: #f2d7d9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 세번째 카드 앞 */
+.flip-card-container .flip-card .card-ranking-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+/* 세번째 카드 뒤 */
+.flip-card-container .flip-card .card-ranking-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+/* figure */
+figure {
+  z-index: -1;
+}
+
+/* 첫번째 카드 */
+figure .img-music-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9dbc96;
+}
+
+/* 두번째 카드 */
+figure .img-profile-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7db9b6;
+}
+
+/* 세번째 카드 */
+figure .img-ranking-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2d7d9;
+}
+
+/* 카드 가운데 img */
+/* 첫번째 카드 */
+.flip-card-container .flip-card .card-music-front figure > img {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/* 두번째 카드 */
+.flip-card-container .flip-card .card-profile-front figure > img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 57%;
+}
+
+/* 세번째 카드 */
+.flip-card-container .flip-card .card-ranking-front figure > img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 49%;
+}
+
+/* 카드 상단 설명 */
+figcaption {
+  display: block;
+  font-size: 17px;
+  width: auto;
+  margin-top: 10%;
+  padding: 8px 18px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  word-spacing: 6px;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 12px;
+  color: white;
+  /* background: hsla(var(--hue), 25%, 10%, 0.5); */
+}
+
+/* 
+.img-music-bg {
+  /* background: hsla(var(--hue), 25%, 10%, 0.5); 불투명도 
+} */
+.flip-card-container .flip-card .card-music-front .img-music-bg {
+  -webkit-clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+          clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.flip-card-container .flip-card .card-music-back .img-music-bg {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  background-color: rgb(248, 247, 197);
+}
+
+/* /////// */
+.flip-card-container .flip-card .card-profile-front .img-profile-bg {
+  -webkit-clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+          clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.flip-card-container .flip-card .card-profile-back .img-profile-bg {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  background-color: #f5e9cf;
+}
+
+/* /////// */
+.flip-card-container .flip-card .card-ranking-front .img-ranking-bg {
+  -webkit-clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+          clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.flip-card-container .flip-card .card-ranking-back .img-ranking-bg {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+  background-color: #ffe1c4;
+}
+
+/* hover state */
+/* 첫번째 카드 */
+.flip-card-container:hover .card-music-front .img-music-bg::before {
+  width: 6px;
+  border-left-color: var(--primary);
+  border-right-color: var(--primary);
+}
+
+/* 두번째 카드 */
+.flip-card-container:hover .card-profile-front .img-profile-bg::before {
+  width: 6px;
+  border-left-color: var(--primary);
+  border-right-color: var(--primary);
+}
+
+/* 세번째 카드 */
+.flip-card-container:hover .card-ranking-front .img-ranking-bg::before {
+  width: 6px;
+  border-left-color: var(--primary);
+  border-right-color: var(--primary);
+}
+
+/* 버튼 */
+.select-page a {
+  font-size: 17px;
+  font-family: inherit;
+  font-weight: bold;
+  color: gray;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 1px;
+  padding: 9px 20px;
+  border: 2px solid var(--grey);
+  border-radius: 1000px;
+  background: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.select-page a:hover,
+.select-page a:focus {
+  color: rgb(82, 82, 82);
+  /* background: hsla(var(--hue), 25%, 10%, 0.2); */
+  border-color: currentColor;
+  letter-spacing: 3px;
+}
+.select-page a:active {
+  transform: translate(2px);
+}
+
+/* .design-container */
+.design-container {
+  --tr: 90;
+  --op: 0.5;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* .design */
+.design {
+  display: block;
+  background: var(--grey);
+  position: absolute;
+  opacity: var(--op);
+  transition: 0.3s;
+}
+
+.design--1,
+.design--2,
+.design--3,
+.design--4 {
+  width: 1px;
+  height: 100%;
+}
+
+.design--1,
+.design--2 {
+  top: 0;
+  transform: translateY(calc((var(--tr) - var(--tr) * 2) * 1%));
+}
+
+.design--1 {
+  left: 20%;
+}
+
+.design--2 {
+  left: 80%;
+}
+
+.design--3,
+.design--4 {
+  bottom: 0;
+  transform: translateY(calc((var(--tr) + var(--tr) - var(--tr)) * 1%));
+}
+
+.design--3 {
+  left: 24%;
+}
+
+.design--4 {
+  left: 76%;
+}
+
+.design--5,
+.design--6,
+.design--7,
+.design--8 {
+  width: 100%;
+  height: 1px;
+}
+
+.design--5,
+.design--6 {
+  left: 0;
+  transform: translateX(calc((var(--tr) - var(--tr) * 2) * 1%));
+}
+
+.design--5 {
+  top: 41%;
+}
+
+.design--6 {
+  top: 59%;
+}
+
+.design--7,
+.design--8 {
+  right: 0;
+  transform: translateX(calc((var(--tr) + var(--tr) - var(--tr)) * 1%));
+}
+
+.design--7 {
+  top: 44%;
+}
+
+.design--8 {
+  top: 56%;
+}
+
+/* states */
+a:hover + .design-container,
+a:active + .design-container,
+a:focus + .design-container {
+  --tr: 20;
+  --op: 0.7;
+}
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 16px;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.select-page.hide {
+  display: none;
+  /* transform: scaleY(0); */
+  /* visibility: hidden; */
+}/*# sourceMappingURL=select.css.map */

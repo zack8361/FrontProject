@@ -1,0 +1,100 @@
+p {
+  margin: 0;
+}
+
+.cardWrap {
+  border-radius: 25px;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(30deg, #005aa7, #cf8bf3, #fffde4);
+}
+.cardWrap .rankNum {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+  color: #4fcfd6;
+}
+.cardWrap .imgWrap {
+  position: relative;
+  margin-bottom: 30px;
+}
+.cardWrap .imgWrap .albumWrap {
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: none;
+  overflow: hidden;
+}
+.cardWrap .imgWrap .albumWrap .albumImg {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.cardWrap .imgWrap .iconBack {
+  position: absolute;
+  bottom: 2px;
+  right: 73px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #4fcfd6;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardWrap .imgWrap .iconBack .playBtn {
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+.cardWrap .infoWrap {
+  position: relative;
+  display: flex;
+  height: 120px;
+}
+.cardWrap .infoWrap .music_Singer_Album {
+  padding-top: 10px;
+  width: 70%;
+  height: 120px;
+  margin-left: 40px;
+}
+.cardWrap .infoWrap .music_Singer_Album .albumName {
+  font-size: 14px;
+  color: lightgray;
+  font-weight: 200;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.cardWrap .infoWrap .music_Singer_Album .songName {
+  text-align: center;
+  font-size: 40px;
+  margin-right: 5px;
+  width: 85px;
+  margin-top: 5px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.cardWrap .infoWrap .music_Singer_Album .singerName {
+  color: lightgray;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.cardWrap .infoWrap .heartIcon {
+  position: absolute;
+  top: 30%;
+  right: -25px;
+  width: 30%;
+  font-size: 35px;
+  color: white;
+}/*# sourceMappingURL=card.css.map */

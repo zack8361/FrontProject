@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>playlist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b4e1a12ac1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- main -->
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="../playlist/style.css" />
+
+    <!-- <script defer src="../playlist/main.js"></script> -->
+    <link rel="stylesheet" href="../playlist/header.css" />
+    <script defer src="../playlist/header.js"></script>
+    <script defer src="../mainpage/wave/js/search.js"></script>
+    <script src="../item.json"></script>
+    <script defer src="../mainpage/wave/js/modal.js"></script>
+    <script defer src="../playlist/main.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="leftBox">
+        <div class="homeIcon">
+          <a class="homeBtn" href="./index.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+        </div>
+        <div class="searchWrap">
+          <!-- 검색창 -->
+          <div class="inputWrap">
+            <input class="searchInput" type="text" placeholder="노래 검색" />
+            <div class="searchIconWrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <!-- 숨겨진 검색 결과 -->
+          <div class="searchResult">
+            <!-- 랭크 1~5 -->
+            <div class="chartRank">
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+            </div>
+            <!-- 검색 결과 -->
+            <div class="music">
+              <!-- <div class="musicNoResult">
+                <p>검색결과가 없습니다.</p>
+              </div> -->
+            </div>
+            <div class="singer">
+              <!-- <div class="singerNoResult">
+                <p>검색결과가 없습니다.</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightBox">
+        <div class="qrIcon">
+          <a class="qrBtn" href="#">
+            <i class="fa-solid fa-qrcode modalBtn"></i>
+          </a>
+        </div>
+        <div class="fullScreenIcon">
+          <a class="fullBtn" href="#">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 헤더 터미널 모달 부분 -->
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <div class="modal-title">
+            <a href="#" id="closeBtn"
+              ><i class="fa-solid fa-circle-xmark"></i
+            ></a>
+            <a href="#"><i class="fa-solid fa-folder-open"></i></a>
+            <span class="textContent">% Welcome to KDT#Log terminal! %</span>
+          </div>
+        </div>
+
+        <section class="cmd">
+          <div class="inner">
+            <!-- <div class="welcome">% Welcome to KDT#Log terminal! %</div> -->
+            <div class="line1">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - -
+            </div>
+
+            <div class="command">COMMANDS</div>
+            <div class="commands-line">
+              <div>whoami</div>
+              <div>pwd</div>
+              <div>exit</div>
+              <div>ls</div>
+              <div>cd</div>
+              <div>clear</div>
+            </div>
+            <div class="line2">
+              - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+              - - - - - - - - - - - - - - - - - - - - - - - - - -
+            </div>
+            <br />
+            <div id="empty" class="empty"></div>
+
+            <div class="log">
+              <div class="log-1">
+                <span>ch@</span>
+                <span>:</span>
+                <span>MacBookAir ~ </span>
+                <span>%&nbsp;</span>
+              </div>
+              <input type="text" class="input" onkeyup="fnEnterkey();" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <figure>
+      <div class="bg_video">
+        <ul>
+          <li class="video_on" data-index="1">
+            <video
+              src="../playlist/img/video1.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="2">
+            <video
+              src="../playlist/img/video2.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="3">
+            <video
+              src="../playlist/img/video3.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="4">
+            <video
+              src="../playlist/img/video4.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="5">
+            <video
+              src="../playlist/img/video5.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="6">
+            <video
+              src="../playlist/img/video6.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="7">
+            <video
+              src="../playlist/img/video7.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="8">
+            <video
+              src="../playlist/img/video8.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="9">
+            <video
+              src="../playlist/img/video9.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="10">
+            <video
+              src="../playlist/img/video10.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+          <li data-index="11">
+            <video
+              src="../playlist/img/video11.mp4"
+              autoplay=""
+              muted=""
+              loop=""
+            ></video>
+          </li>
+        </ul>
+      </div>
+      <h1><strong>PLAYLIST</strong><br /></h1>
+      <section>
+        <article>
+          <div class="inner">
+            <ul>
+              <!--script-->
+            </ul>
+            <div class="lp"></div>
+            <div class="turntable"></div>
+          </div>
+        </article>
+      </section>
+      <div class="wrap__music">
+        <div class="music__inner">
+          <!-- // music__song -->
+          <div class="music__song">
+            <p class="name"></p>
+            <p class="artist"></p>
+          </div>
+          <!-- // music__progress -->
+          <div class="music__progress">
+            <div class="bar">
+              <audio id="main-audio" src=""></audio>
+            </div>
+            <div class="timer">
+              <span class="current">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+          <!-- // music__control -->
+          <div class="music__control">
+            <i id="control-repeat" class="material-icons" title="전체 반복"
+              >repeat</i
+            >
+            <i id="control-prev" class="material-icons" title="이전곡"
+              >skip_previous</i
+            >
+            <div class="play-pause">
+              <i id="control-play" class="material-icons" title="재생"
+                >play_arrow</i
+              >
+            </div>
+            <i id="control-next" class="material-icons" title="다음곡"
+              >skip_next</i
+            >
+            <i id="control-list" class="material-icons fa-regular fa-heart"></i>
+          </div>
+        </div>
+      </div>
+      <!-- music__list -->
+      <div class="music__list">
+        <div class="list">
+          <ul>
+            <!-- Javascript -->
+          </ul>
+        </div>
+      </div>
+    </figure>
+  </body>
+</html>

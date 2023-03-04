@@ -1,0 +1,102 @@
+p {
+  margin: 0;
+}
+
+.cardWrap {
+  border-radius: 25px;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(30deg, #005aa7, #cf8bf3, #fffde4);
+
+  .rankNum {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #4fcfd6;
+  }
+  .imgWrap {
+    position: relative;
+    margin-bottom: 30px;
+    .albumWrap {
+      margin: 0 auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: none;
+      overflow: hidden;
+      .albumImg {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .iconBack {
+      position: absolute;
+      bottom: 2px;
+      right: 73px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #4fcfd6;
+      z-index: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .playBtn {
+        display: block;
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+  .infoWrap {
+    position: relative;
+    display: flex;
+    height: 120px;
+    .music_Singer_Album {
+      padding-top: 10px;
+      width: 70%;
+      height: 120px;
+      margin-left: 40px;
+      .albumName {
+        font-size: 14px;
+        color: lightgray;
+        font-weight: 200;
+        margin-bottom: 5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+      .songName {
+        text-align: center;
+        font-size: 40px;
+        margin-right: 5px;
+        width: 85px;
+        margin-top: 5px;
+        font-weight: 500;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+      .singerName {
+        color: lightgray;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+    }
+
+    .heartIcon {
+      position: absolute;
+      top: 30%;
+      right: -25px;
+      width: 30%;
+      font-size: 35px;
+      color: white;
+      // color: #4fcfd6;
+    }
+  }
+}

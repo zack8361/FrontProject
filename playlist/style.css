@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@400;700&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+body {
+  font: 16px/1 "Oswald";
+}
+
+figure {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(-65deg, transparent 50%, whitesmoke 50%);
+}
+figure h1 {
+  position: absolute;
+  top: 12vh;
+  left: 4vw;
+  font-size: 0;
+}
+figure strong {
+  font-size: 4rem;
+  line-height: 1.4;
+  color: darkslategray;
+  letter-spacing: 1px;
+}
+figure span {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #515c6f;
+  letter-spacing: 1px;
+}
+figure .menu {
+  position: absolute;
+  top: 8vh;
+  right: 4vw;
+  font-size: 30px;
+  color: #fff;
+}
+figure section {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+figure section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+figure section article .inner {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5vh 2.5vw 8vh;
+  border-radius: 50%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+  transition: 1s;
+}
+figure section article .inner>ul>li{
+  position: absolute;
+  top: 33.5%;
+  left: 33.5%;
+  opacity: 0;
+  transition: .2s;
+}
+figure section article .inner>ul>li div img{
+ width: 230px;
+ height: 230px;
+}
+figure section article .inner>ul>li.album_on{
+  opacity: 1;
+}
+figure section article .inner .lp{
+  background-image: url("./img/lp.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  position: absolute;
+  animation-fill-mode : none;
+}
+figure section article .inner .turntable{
+  background-image: url("./img/lp2.png");
+  background-size: cover;
+  width: 80%;
+  height: 108%;
+  position: relative;
+  top: -69%;
+  left: 40%;
+  transform-origin: top right;
+  transform: rotate(11deg);
+}
+ figure section article .inner {
+  opacity: 1;
+}
+figure section article .inner .lp.lp-on {
+  animation: lp-rotation 4s linear infinite running 1s;
+}
+figure section article .inner .lp.lp-off {
+  animation: lp-rotation 4s linear infinite paused 1s;
+}
+
+@keyframes lp-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 플레이어 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+:root {
+    --pink : gray;
+    --violet : darkslategray;
+}
+.wrap__music {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.music__inner {
+    width: 440px;
+    height: 240px;
+    padding: 25px 30px;
+    position: relative;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+.music__song {
+    text-align: center;
+    margin: 11px;
+}
+.music__song p {
+    color: #515c6f;
+}
+.music__song .name {
+    font-size: 25px;
+    padding-bottom: 5px;
+}
+.music__song .artist {
+    font-size: 20px;
+    opacity: 0.9;
+    line-height: 35px;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+.music__progress {
+    height: 6px;
+    width: 100%;
+    border-radius: 10px;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+.music__progress .bar {
+    height: inherit;
+    width: 0%;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+}
+.music__progress .timer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #515c6f;
+    font-size: 0.9em;
+    pointer-events: none;
+}
+.music__control {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music__control i {
+    font-size: 33px;
+    user-select: none;
+    background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.music__control i:nth-child(2),
+.music__control i:nth-child(4) {
+  font-size: 45px;
+}
+.music__control i.fa-heart{
+  font-size: 27px;
+}
+.music__control .play-pause {
+  width: 45px; height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--pink);
+  z-index: 1;
+}
+
+.music__control .play-pause #control-play {
+  -webkit-text-fill-color: var(--pink);
+  opacity: 1;
+  font-size: 35px;
+}
+.music__list {
+    position: absolute;
+    width: 26vw;
+    height: 65vh;
+    left: 0%;
+    top: 25%;
+    padding: 15px;
+}
+.music__list .list {
+  color: #515c6f;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 13%;
+}
+.music__list .list > ul {
+  max-height: 100%;
+  overflow: auto;
+}
+.music__list .list > ul::-webkit-scrollbar {
+  width: 0;
+}
+.music__list .list > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.music__list .list > ul > li.playing {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+}
+.music__list .list > ul > li{
+  cursor: pointer;
+}
+.music__list .list > ul > li > div em {
+  font-style: normal;
+  font-size: 21px;
+}
+.music__list .list > ul > li > div p {
+  opacity: 0.8;
+  margin-top: 7px;
+  font-size: 17px;
+}
+
+i.material-icons{cursor: pointer;}
+i.material-icons.queue{cursor: auto;}
+
+/* 턴테이블 */
+@keyframes turntable-on {
+  0% {
+    transform: rotate(11deg);
+  }
+  100% {
+    transform-origin: top right;
+    transform : rotate(60deg);
+    opacity: 0%;
+  }
+}
+@keyframes turntable-off {
+  0% {
+    transform: rotate(60deg);
+    opacity: 0%;
+  }
+  100% {
+    transform-origin: top right;
+    transform : rotate(11deg);
+  }
+}
+
+figure section article .inner .turntable.turntable-off {
+  animation: turntable-on 1s linear 1 forwards;
+}
+figure section article .inner .turntable.turntable-on {
+  animation: turntable-off 1s linear 1 forwards;
+}
+
+/* video */
+figure .bg_video {
+  position: absolute;
+  top: 3.5%;
+  left: 33%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+}
+figure .bg_video li{display: none;}
+figure .bg_video li.video_on{display: block;}
+figure .bg_video li video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

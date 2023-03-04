@@ -1,0 +1,122 @@
+#modal.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#modal .modal-window {
+  background: whitesmoke;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 800px;
+  height: 70vh;
+  position: relative;
+  top: -60px;
+  padding: 10px;
+  transition: 1s;
+}
+
+.cmd {
+  display: flex;
+  height: 85vh;
+}
+.cmd .inner .log {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  top: 0;
+}
+.empty {
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 1.5;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  max-height: 50%;
+  padding-right: 10px;
+}
+.empty::-webkit-scrollbar {
+  width: 5px;
+}
+.empty::-webkit-scrollbar-thumb {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.modal-title {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+
+.fa-folder-open {
+  position: absolute;
+  color: rgb(104, 126, 149);
+  left: 32%;
+}
+
+.fa-circle-xmark {
+  position: absolute;
+  right: 1%;
+  color: black;
+  cursor: pointer;
+}
+.textContent {
+  position: absolute;
+  left: 35%;
+}
+.input {
+  border: none;
+  border: 1px solid beige;
+  outline: none;
+  background-color: whitesmoke;
+  font-size: 16px;
+}
+.title {
+  background-image: url("./img/window-header-bg.png");
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+}
+.line1 {
+  margin-top: 20px;
+}
+
+#modal .modal-window.close {
+  opacity: 0;
+  transition: 1s;
+}
+
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

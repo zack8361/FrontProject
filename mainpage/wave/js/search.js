@@ -9,8 +9,7 @@ const searchResult = document.querySelector(".searchResult");
 const mainHeader = document.querySelector(".header");
 const mainFooter = document.querySelector(".footer");
 const cardWrap2 = document.querySelector(".cardWrap");
-
-// let isInputDisply = false;
+const url = "https://www.youtube.com/results?search_query=";
 
 //모달 Dom 선택
 const cardmodal = document.querySelector(".cardmodal");
@@ -56,6 +55,10 @@ for (let i = 0; i < rank.length; i++) {
     albumImg.setAttribute("src", targetData[0].albumCover);
     //6 아이콘 div 폰트 어썸 아이콘은 visiblity로 클래스 줬다 뺐다 하면서 처리하자
     const iconBack = document.createElement("div");
+    iconBack.setAttribute(
+      "onClick",
+      `window.open("${url}${targetData[0].song}");`
+    );
     iconBack.classList.add("iconBack");
     //icon
     const playBtn = document.createElement("i");
@@ -99,12 +102,6 @@ for (let i = 0; i < rank.length; i++) {
     music_Singer_Album.append(songName);
     infoWrap.append(heartIcon);
     heartIcon.append(heartBtn);
-  });
-}
-
-for (let i = 0; i < rank.length; i++) {
-  rank[i].addEventListener("click", function (e) {
-    console.log(e.target);
   });
 }
 
@@ -175,13 +172,84 @@ input2.addEventListener("keyup", function (e) {
     musicResultWrap.append(resultMusicName);
     musicResultWrap.append(resultArtistName);
 
-    //모달
-
-    searchResult.addEventListener("click", function () {
-      cardmodal.style.display = "flex";
-      // searchResult.classList.remove("show");
-    });
     music.append(musicResultWrap);
+
+    //music 모달 창
+
+    musicResultWrap.addEventListener("click", function () {
+      cardmodal.style.display = "flex"; //이거 맨마지막에
+
+      const idNum = musicResultWrap.id;
+      const targetData = data.filter((el) => el.id == idNum);
+      //1 젤 큰 div
+      const cardWrap = document.createElement("div");
+      cardWrap.classList.add("cardWrap");
+      //2 순위
+      const rankNum = document.createElement("p");
+      rankNum.classList.add("rankNum");
+      // rankNum.innerText(idNum + 1);
+      rankNum.textContent = Number(idNum) + 1;
+      //3 이미지와 아이콘 랩 wrap
+      const imgWrap = document.createElement("div");
+      imgWrap.classList.add("imgWrap");
+      //4 앨범 이미지 랩
+      const albumWrap = document.createElement("div");
+      albumWrap.classList.add("albumWrap");
+      //5 앨범 이미지
+      const albumImg = document.createElement("img");
+      albumImg.classList.add("albumImg");
+      albumImg.setAttribute("src", targetData[0].albumCover);
+      //6 아이콘 div 폰트 어썸 아이콘은 visiblity로 클래스 줬다 뺐다 하면서 처리하자
+      const iconBack = document.createElement("div");
+      iconBack.setAttribute(
+        "onClick",
+        `window.open("${url}${targetData[0].song}");`
+      );
+      iconBack.classList.add("iconBack");
+      //icon
+      const playBtn = document.createElement("i");
+
+      playBtn.classList.add("fa-solid", "fa-play");
+      //icon
+      const heartBtn = document.createElement("i");
+      heartBtn.classList.add("fa-solid", "fa-heart");
+      //7 곡 정보
+      const infoWrap = document.createElement("div");
+      infoWrap.classList.add("infoWrap");
+      //8 제목,가수,앨범
+      const music_Singer_Album = document.createElement("div");
+      music_Singer_Album.classList.add("music_Singer_Album");
+      //9 앨범 이름
+      const albumName = document.createElement("span");
+      albumName.classList.add("albumName");
+      albumName.textContent = targetData[0].album;
+      //10 가수 이름
+      const singerName = document.createElement("span");
+      singerName.classList.add("singerName");
+      singerName.textContent = targetData[0].singer;
+      //11 곡 이름
+      const songName = document.createElement("p");
+      songName.classList.add("songName");
+      songName.textContent = targetData[0].song;
+      //12 하트아이콘랩
+      const heartIcon = document.createElement("div");
+      heartIcon.classList.add("heartIcon");
+
+      cardmodal.append(cardWrap);
+      cardWrap.append(rankNum);
+      cardWrap.append(imgWrap);
+      imgWrap.append(albumWrap);
+      albumWrap.append(albumImg);
+      imgWrap.append(iconBack);
+      iconBack.append(playBtn);
+      cardWrap.append(infoWrap);
+      infoWrap.append(music_Singer_Album);
+      music_Singer_Album.append(albumName);
+      music_Singer_Album.append(singerName);
+      music_Singer_Album.append(songName);
+      infoWrap.append(heartIcon);
+      heartIcon.append(heartBtn);
+    });
   }
 });
 
@@ -256,6 +324,80 @@ input2.addEventListener("keyup", function (e) {
     singerResultWrap.append(resultSingerMusicName);
     singerResultWrap.append(resultSingerArtistName);
     singer.append(singerResultWrap);
+    //singer 모달 창
+    singerResultWrap.addEventListener("click", function () {
+      cardmodal.style.display = "flex"; //이거 맨마지막에
+
+      const idNum = singerResultWrap.id;
+      const targetData = data.filter((el) => el.id == idNum);
+      //1 젤 큰 div
+      const cardWrap = document.createElement("div");
+      cardWrap.classList.add("cardWrap");
+      //2 순위
+      const rankNum = document.createElement("p");
+      rankNum.classList.add("rankNum");
+      // rankNum.innerText(idNum + 1);
+      rankNum.textContent = Number(idNum) + 1;
+      //3 이미지와 아이콘 랩 wrap
+      const imgWrap = document.createElement("div");
+      imgWrap.classList.add("imgWrap");
+      //4 앨범 이미지 랩
+      const albumWrap = document.createElement("div");
+      albumWrap.classList.add("albumWrap");
+      //5 앨범 이미지
+      const albumImg = document.createElement("img");
+      albumImg.classList.add("albumImg");
+      albumImg.setAttribute("src", targetData[0].albumCover);
+      //6 아이콘 div 폰트 어썸 아이콘은 visiblity로 클래스 줬다 뺐다 하면서 처리하자
+      const iconBack = document.createElement("div");
+      iconBack.classList.add("iconBack");
+      iconBack.setAttribute(
+        "onClick",
+        `window.open("${url}${targetData[0].song}");`
+      );
+      //icon
+      const playBtn = document.createElement("i");
+      playBtn.classList.add("fa-solid", "fa-play");
+      //icon
+      const heartBtn = document.createElement("i");
+      heartBtn.classList.add("fa-solid", "fa-heart");
+      //7 곡 정보
+      const infoWrap = document.createElement("div");
+      infoWrap.classList.add("infoWrap");
+      //8 제목,가수,앨범
+      const music_Singer_Album = document.createElement("div");
+      music_Singer_Album.classList.add("music_Singer_Album");
+      //9 앨범 이름
+      const albumName = document.createElement("span");
+      albumName.classList.add("albumName");
+      albumName.textContent = targetData[0].album;
+      //10 가수 이름
+      const singerName = document.createElement("span");
+      singerName.classList.add("singerName");
+      singerName.textContent = targetData[0].singer;
+      //11 곡 이름
+      const songName = document.createElement("p");
+      songName.classList.add("songName");
+      songName.textContent = targetData[0].song;
+      //12 하트아이콘랩
+      const heartIcon = document.createElement("div");
+      heartIcon.classList.add("heartIcon");
+
+      cardmodal.append(cardWrap);
+      cardWrap.append(rankNum);
+      cardWrap.append(imgWrap);
+      imgWrap.append(albumWrap);
+      albumWrap.append(albumImg);
+      imgWrap.append(iconBack);
+      iconBack.append(playBtn);
+      cardWrap.append(infoWrap);
+      infoWrap.append(music_Singer_Album);
+      music_Singer_Album.append(albumName);
+      music_Singer_Album.append(singerName);
+      music_Singer_Album.append(songName);
+      infoWrap.append(heartIcon);
+      heartIcon.append(heartBtn);
+    });
   }
   // if (searchData.length === 0) artistResultWrap.innerHTML = "";
 

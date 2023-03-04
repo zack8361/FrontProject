@@ -47,10 +47,11 @@ p {
       display: flex;
       justify-content: center;
       align-items: center;
-      .playBtn {
+      .fa-play {
         display: block;
         font-size: 20px;
         color: white;
+        cursor: pointer;
       }
     }
   }
@@ -58,16 +59,20 @@ p {
     position: relative;
     display: flex;
     height: 120px;
-    width: 140px;
+    // width: 140px;
+    width: 100%;
     .music_Singer_Album {
       padding-top: 10px;
       width: 70%;
       height: 120px;
       margin-left: 40px;
+
       text-overflow: ellipsis;
       white-space: nowrap;
       word-break: break-all;
       .albumName {
+        display: block;
+        overflow: hidden;
         font-size: 14px;
         color: lightgray;
         font-weight: 200;
@@ -75,19 +80,23 @@ p {
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
+        width: 200px;
       }
       .songName {
-        text-align: center;
-        font-size: 40px;
+        font-size: 23px;
         margin-right: 5px;
-        width: 85px;
+        width: 200px;
         margin-top: 5px;
         font-weight: 500;
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
+        overflow: hidden;
       }
       .singerName {
+        display: block;
+        overflow: hidden;
+        width: 180px;
         color: lightgray;
         font-size: 14px;
         text-overflow: ellipsis;
@@ -98,11 +107,12 @@ p {
 
     .heartIcon {
       position: absolute;
-      top: 30%;
-      right: -25px;
+      top: 38%;
+      right: -30px;
       width: 30%;
-      font-size: 35px;
+      font-size: 30px;
       color: white;
+      cursor: pointer;
       // color: #4fcfd6;
     }
   }

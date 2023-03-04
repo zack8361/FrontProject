@@ -40,6 +40,9 @@
     <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" />
     <!-- <link rel="stylesheet" href="../mainpage/wave/css/cmdmodals.css" /> -->
 
+    <!-- 헤더 css -->
+    <link rel="stylesheet" href="../music-chart/css/header.css" />
+
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -58,7 +61,7 @@
     <script defer src="../mainpage/select-page/js/header.js"></script>
   </head>
   <body>
-    <!-- HEADER -->
+    <!-- 상단 헤더 바 -->
     <div class="navbar">
       <div class="leftBox">
         <div class="homeIcon">
@@ -67,17 +70,69 @@
           ></a>
         </div>
         <div class="searchWrap">
-          <input class="searchInput" type="text" placeholder="노래 검색" />
-          <div class="searchIconWrap">
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <!-- 검색창 -->
+          <div class="inputWrap">
+            <input class="searchInput" type="text" placeholder="음악 검색" />
+            <div class="searchIconWrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <!-- 숨겨진 검색 결과 -->
+          <div class="searchResult">
+            <!-- 랭크 1~5 -->
+            <div class="chartRank">
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+              <div class="rank">
+                <div class="rankImgWrap">
+                  <img class="rankImg" alt="테스트 송태섭 이미지" />
+                </div>
+                <p class="rankNumber"></p>
+                <p class="musicName"></p>
+                <p class="artistName"></p>
+              </div>
+            </div>
+            <!-- 검색 결과 -->
+            <div class="music"></div>
+            <div class="singer"></div>
           </div>
         </div>
       </div>
-
+      <!-- 헤더 오른쪽 아이콘 부분 -->
       <div class="rightBox">
         <div class="qrIcon">
           <a class="qrBtn" href="#">
-            <i class="fa-solid fa-qrcode"></i>
+            <i class="fa-solid fa-qrcode modalBtn"></i>
           </a>
         </div>
         <div class="fullScreenIcon">
@@ -350,4 +405,5 @@
       <a id="btn_top"><i class="fa-solid fa-angles-up"></i></a>
     </div>
   </body>
+  <script src="../music-chart/js/search.js"></script>
 </html>

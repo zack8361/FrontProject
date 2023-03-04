@@ -10,11 +10,36 @@
   font-style: normal;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Nunito:wght@300&display=swap");
+@font-face {
+  font-family: "Orbitron";
+  src: local("Orbitron-Light"), local("Orbitron-Regular"),
+    url(https://fonts.gstatic.com/s/orbitron/v7/HmnHiRzvcnQr8CjBje6GQvesZW2xOQ-xsNqO47m55DA.woff2)
+      format("woff2");
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Montserrat:wght@800&display=swap");
 
 // font-family: 'Anton', sans-serif;
 // font-family: 'Archivo Black', sans-serif;
-// font-family: 'Nunito', sans-serif;
+// font-family: 'Montserrat', sans-serif;
 
 // 속성
 $left-lg: "Archivo Black", sans-serif;
@@ -68,13 +93,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // z-index: 1;
+    height: 70vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
     .left__text-sm {
       font-family: $left-primary-font;
       font-size: 20px;
       font-style: italic;
       text-decoration: underline;
       color: #fff;
+      z-index: 1;
       &::before {
         width: 24px;
         height: 2px;
@@ -92,9 +122,10 @@ body {
     .left__text-lg {
       color: #fff;
       font-family: $left-lg;
-      font-size: 72px;
+      font-size: 80px;
       font-weight: bold;
       letter-spacing: 1.4px;
+      z-index: 10;
     }
     .left__btn {
       color: #fff;
@@ -122,7 +153,7 @@ body {
   /* 오른쪽 하단 카드 / 팝업 */
   .popupVideo {
     height: 40vh;
-    margin: 0px -150px 0 0;
+    // margin: 0px -150px 0 0;
     display: flex;
     align-self: flex-end;
     z-index: 1;
@@ -132,7 +163,7 @@ body {
       box-shadow: inset 0 0 100vw 100vw rgba(0, 0, 0, 0.3),
         0 16px 8px -8px rgba(0, 0, 0, 0.4);
       border-radius: 8px;
-      width: 14vw;
+      width: 12vw;
       height: calc(100% - 64px);
       margin: 0 8px;
       padding: 24px 16px;
@@ -192,57 +223,6 @@ body {
   }
 }
 
-// @media screen and (max-width: 960px) {
-//   main {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     margin: 0 16px;
-//     padding: 8px 0 32px;
-//     height: unset;
-//     width: calc(100% - 65px);
-//     transform: scale(1);
-//   }
-
-//   section.card-lg__container {
-//     margin: 32px 0 0;
-//     padding: 0 0 32px;
-//   }
-
-//   section.card-sm__container {
-//     align-self: center;
-//     margin: 0 -72px 0 0;
-//   }
-// }
-
-// @media screen and (max-width: 695px) {
-//   main {
-//     padding: 8px 32px 0;
-//   }
-
-//   section.card-sm__container {
-//     height: unset;
-//     width: 100%;
-//     margin: 0;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   section.card-sm {
-//     width: calc(100% - 32px);
-//     height: 200px;
-//     margin: 0 0 16px;
-//   }
-
-//   .card-sm:hover {
-//     margin: 8px 0;
-//     transform: scale(0.9);
-//   }
-// }
-
 // HEADER
 .navbar {
   display: flex;
@@ -251,7 +231,6 @@ body {
   height: 80px;
   top: 0;
   z-index: 1;
-  // border-bottom: 1px solid black;
   align-items: center;
   justify-content: space-between;
 
@@ -320,18 +299,11 @@ body {
 
 .chart_section {
   height: 100vh;
-  // background-image: url("../img/newjeans_bg.jpeg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: 0% 60%;
 }
 .chart_section_1 {
   height: 100vh;
   position: relative;
-  // background-image: url("../img/newjeans_bg.jpeg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: 0% 60%;
+
   .inner_1 {
     border-radius: 10px;
     position: relative;
@@ -354,22 +326,26 @@ body {
         position: relative;
         margin-right: 30px;
         font-family: $left-lg;
-        font-size: 48px;
+        font-size: 45px;
+        color: #3a3a3a;
       }
       button {
-        color: #454545;
-        font-family: "NEXON Lv2 Gothic";
+        color: #606060;
+        font-family: "GmarketSansMedium";
+        font-weight: 300;
         white-space: nowrap;
         word-break: break-all;
         font-size: 16px;
         background-color: transparent;
-        border: 1px solid #a9bcfd;
+        border: 1px solid #8ca7ff;
         border-radius: 30px;
         padding: 12px 15px;
         margin-right: 10px;
         display: flex;
+        align-content: center;
         align-items: center;
         height: 30px;
+        flex-wrap: wrap;
         cursor: pointer;
         transition: 0.3s;
         &:hover {
@@ -383,7 +359,7 @@ body {
       }
 
       .calendar {
-        font-family: "NEXON Lv2 Gothic";
+        font-family: "GmarketSansMedium";
         position: absolute;
         right: -3%;
         width: 100px;
@@ -397,7 +373,7 @@ body {
           justify-content: center;
           align-items: center;
           height: 25px;
-          background-color: #c9d6ffca;
+          background-color: #8ca7ffca;
           #month {
             font-size: 20px;
             color: #093732;
@@ -450,7 +426,7 @@ body {
           display: block;
           h1 {
             position: relative;
-            font-size: 45px;
+            font-size: 50px;
             color: #888;
             letter-spacing: 1px;
             font-family: "Anton", sans-serif;
@@ -465,16 +441,19 @@ body {
             }
           }
           h2 {
+            font-family: "Nanum Gothic", sans-serif;
             position: relative;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             word-break: break-all;
             width: 10vw;
-            height: 40px;
+            height: 33px;
+            font-weight: 700;
           }
 
           h3 {
+            font-family: "Nanum Gothic", sans-serif;
             position: relative;
             color: #aaa9a9;
             overflow: hidden;
@@ -538,7 +517,7 @@ body {
       padding: 0 50px;
       display: flex;
       justify-content: space-around;
-      z-index: 99;
+      z-index: 1;
 
       .rank_div {
         font-family: "Anton", sans-serif;
@@ -554,7 +533,7 @@ body {
           display: block;
           h1 {
             position: relative;
-            font-size: 45px;
+            font-size: 50px;
             color: #888;
             letter-spacing: 1px;
             font-family: "Anton", sans-serif;
@@ -569,6 +548,7 @@ body {
             }
           }
           h2 {
+            font-family: "Nanum Gothic", sans-serif;
             position: relative;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -576,9 +556,11 @@ body {
             word-break: break-all;
             width: 10vw;
             height: 40px;
+            font-weight: 700;
           }
 
           h3 {
+            font-family: "Nanum Gothic", sans-serif;
             position: relative;
             color: #aaa9a9;
             overflow: hidden;
@@ -588,7 +570,6 @@ body {
             width: 10vw;
             height: 30px;
           }
-
           div {
             position: relative;
             width: 11vw;
@@ -604,6 +585,10 @@ body {
               cursor: pointer;
               &:hover {
                 opacity: 0.5;
+                // /*rgb컬러a알파 0~1까지 화이트 0.3만큼 알파 혹은 반투명*/
+                // background: rgba(255, 0, 0, 0.3);
+                // /* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
+                // transition: background 1s ease-out;
               }
             }
             i {
@@ -644,8 +629,9 @@ body {
 
 .chart_section_2 {
   height: 100vh;
+  height: 100vh;
   position: relative;
-  background-image: url("../img/back.jpeg");
+  // background-image: url("../img/theboyz_bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -669,32 +655,28 @@ body {
       .top50_top {
         position: relative;
         display: inline-flex;
-        align-items: center;
+        align-items: baseline;
         width: 60vw;
         left: 50%;
         transform: translateX(-50%);
         justify-content: space-between;
         h1 {
-          color: white;
+          color: #3a3a3a;
           font-family: $left-lg;
           letter-spacing: 1px;
           padding: 10px 20px;
           font-size: 45px;
           display: inline-flex;
           align-items: center;
-          text-shadow: 3px 4px #83a8ff;
-
+          // text-shadow: 2px 3px #ffffff68;
           span {
-            color: rgb(255, 255, 255);
+            color: #3a3a3a;
             font-size: 25px;
           }
         }
         h2 {
-          font-family: $left-lg;
-          display: inline-flex;
-          align-items: center;
-          border: 1px solid rgb(120, 120, 120);
-          padding: 10px;
+          font-family: "Orbitron";
+          color: #393939;
         }
       }
 
@@ -783,7 +765,7 @@ body {
 
   #btn_top {
     position: absolute;
-    color: #888;
+    color: #ffffff;
     font-size: 35px;
     bottom: 3%;
     left: 50%;

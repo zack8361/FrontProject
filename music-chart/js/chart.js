@@ -594,7 +594,7 @@ const today = {
 };
 
 // 차트 시간 출력
-const hours = now.getHours(); // 시간
+const hours = String(now.getHours()).padStart(2, "0"); // 시간
 console.log(`${hours} : 00`);
 const hoursEl = document.querySelector(
   ".inner_2 > .rank_list > .top50_top > h2"
@@ -636,6 +636,22 @@ const bgImage = `url(../music-chart/img/${chosenImage})`;
 // main에 추가
 const chartSectionEl = document.querySelector(".main_section");
 chartSectionEl.style.backgroundImage = bgImage;
+
+// 배경 랜덤
+const images2 = [
+  "txt_bg.jpeg",
+  "le_sserafim_bg.jpeg",
+  "redvelvet_bg1.jpeg",
+  "oh_my_girl_bg.jpeg",
+  "red_velvet_bg.jpeg",
+];
+//random으로 이미지 나타내기
+const chosenImage2 = images2[Math.floor(Math.random() * images2.length)];
+// 배경 이미지 넣는 형식 url('img주소')
+const bgImage2 = `url(../music-chart/img/${chosenImage2})`;
+// main에 추가
+const chartSectionEl2 = document.querySelector(".chart_section_2");
+chartSectionEl2.style.backgroundImage = bgImage2;
 
 $("#btn_now").on("click", function () {
   $("#rank_inner_1").show();

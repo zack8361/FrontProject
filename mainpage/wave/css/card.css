@@ -3,6 +3,9 @@ p {
 }
 
 .cardWrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
   border-radius: 25px;
   width: 300px;
   height: 400px;
@@ -56,12 +59,16 @@ p {
   position: relative;
   display: flex;
   height: 120px;
+  width: 140px;
 }
 .cardWrap .infoWrap .music_Singer_Album {
   padding-top: 10px;
   width: 70%;
   height: 120px;
   margin-left: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
 }
 .cardWrap .infoWrap .music_Singer_Album .albumName {
   font-size: 14px;

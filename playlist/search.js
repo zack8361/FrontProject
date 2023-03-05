@@ -9,6 +9,7 @@ const searchResult = document.querySelector(".searchResult");
 const mainHeader = document.querySelector(".header");
 const mainFooter = document.querySelector(".footer");
 const cardWrap2 = document.querySelector(".cardWrap");
+const figure = document.querySelector("figure");
 const url = "https://www.youtube.com/results?search_query=";
 
 //모달 Dom 선택
@@ -420,12 +421,12 @@ input2.addEventListener("focus", function () {
 //   searchResult.classList.remove("show");
 // });
 
-mainHeader?.addEventListener("click", function () {
+figure.addEventListener("click", function () {
   searchResult.classList.remove("show");
 });
-mainFooter?.addEventListener("click", function () {
-  searchResult.classList.remove("show");
-});
+// mainFooter?.addEventListener("click", function () {
+//   searchResult.classList.remove("show");
+// });
 
 //모달창 이외에 부분을 클릭하면 모달창 사라지게 함
 

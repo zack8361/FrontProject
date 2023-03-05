@@ -416,9 +416,9 @@ input2.addEventListener("focus", function () {
 //   searchResult.classList.add("show");
 // });
 
-// input2.addEventListener("blur", function () {
-//   searchResult.classList.remove("show");
-// });
+input2.addEventListener("blur", function () {
+  searchResult.classList.remove("show");
+});
 
 mainHeader?.addEventListener("click", function () {
   searchResult.classList.remove("show");

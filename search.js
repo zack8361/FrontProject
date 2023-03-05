@@ -10,6 +10,7 @@ const mainHeader = document.querySelector(".header");
 const mainFooter = document.querySelector(".footer");
 const cardWrap2 = document.querySelector(".cardWrap");
 const url = "https://www.youtube.com/results?search_query=";
+const container = document.querySelector(".container");
 
 //모달 Dom 선택
 const cardmodal = document.querySelector(".cardmodal");
@@ -420,10 +421,7 @@ input2.addEventListener("focus", function () {
 //   searchResult.classList.remove("show");
 // });
 
-mainHeader?.addEventListener("click", function () {
-  searchResult.classList.remove("show");
-});
-mainFooter?.addEventListener("click", function () {
+container?.addEventListener("click", function () {
   searchResult.classList.remove("show");
 });
 

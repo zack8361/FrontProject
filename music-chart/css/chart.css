@@ -19,7 +19,6 @@ a {
 @font-face {
   font-family: "NEXON Lv2 Gothic";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -36,7 +35,6 @@ a {
 @font-face {
   font-family: "NanumSquareNeo-Variable";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -78,13 +76,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   height: 70vh;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-
 }
 .main_section .left__container .left__text-sm {
   font-family: "Nunito", sans-serif;
@@ -608,12 +604,12 @@ body {
 }
 .chart_section_2 .inner_2 {
   position: relative;
-  width: 70vw;
+  width: 80vw;
   top: 50%;
   left: 50%;
   height: 65vh;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.288);
+  background-color: rgba(255, 255, 255, 0.615);
   border-radius: 20px;
   padding: 0 50px;
 }
@@ -627,7 +623,7 @@ body {
   position: relative;
   display: inline-flex;
   align-items: baseline;
-  width: 60vw;
+  width: 70vw;
   left: 50%;
   transform: translateX(-50%);
   justify-content: space-between;
@@ -641,11 +637,17 @@ body {
   display: inline-flex;
   align-items: center;
 }
-.chart_section_2 .inner_2 .rank_list .top50_top h1 span {
-  color: #3a3a3a;
-  font-size: 25px;
+.chart_section_2 .inner_2 .rank_list .top50_top .clock {
+  display: flex;
+  font-size: 20px;
+  align-content: center;
 }
-.chart_section_2 .inner_2 .rank_list .top50_top h2 {
+.chart_section_2 .inner_2 .rank_list .top50_top .clock i {
+  margin-right: 7px;
+  position: relative;
+  transform: translateY(10%);
+}
+.chart_section_2 .inner_2 .rank_list .top50_top .clock h2 {
   font-family: "Orbitron";
   color: #393939;
 }
@@ -653,6 +655,30 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  transition: 0.5s;
+}
+.chart_section_2 .inner_2 .rank_list .scroll_list .next_prev_btn {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 78vw;
+}
+.chart_section_2 .inner_2 .rank_list .scroll_list .next_prev_btn #next_btn {
+  font-size: 35px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.chart_section_2 .inner_2 .rank_list .scroll_list .next_prev_btn #prev_btn {
+  cursor: pointer;
+  font-size: 35px;
+  background-color: transparent;
+  border: none;
 }
 .chart_section_2 .inner_2 .rank_list .scroll_list .list_item {
   position: relative;

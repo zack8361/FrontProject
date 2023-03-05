@@ -595,11 +595,9 @@ const today = {
 
 // 차트 시간 출력
 const hours = String(now.getHours()).padStart(2, "0"); // 시간
-console.log(`${hours} : 00`);
 const hoursEl = document.querySelector(
-  ".inner_2 > .rank_list > .top50_top > h2"
+  ".inner_2 > .rank_list > .top50_top > .clock > h2"
 );
-console.log(hoursEl);
 hoursEl.textContent = `${hours} : 00`;
 
 // 현재에 해당하는 년,월,일,요일을 반복출력
@@ -622,7 +620,7 @@ $(".popupVideo .right__card").click(function () {
       $(".video-popup").removeClass("reveal");
   });
 
-// 배경 랜덤
+// 섹션 3 배경 랜덤
 const images = [
   "newjeans_bg2.jpeg",
   "aespa_bg1.jpeg",
@@ -639,11 +637,10 @@ chartSectionEl.style.backgroundImage = bgImage;
 
 // 배경 랜덤
 const images2 = [
+  "newjeans_bg3.jpeg",
   "txt_bg.jpeg",
   "le_sserafim_bg.jpeg",
-  "redvelvet_bg1.jpeg",
   "oh_my_girl_bg.jpeg",
-  "red_velvet_bg.jpeg",
 ];
 //random으로 이미지 나타내기
 const chosenImage2 = images2[Math.floor(Math.random() * images2.length)];
@@ -710,9 +707,25 @@ $("#btn_bottom_2").click(function () {
   );
 });
 
+// 왼쪽 오른쪽 이동 스크롤
+const scrollListEl = document.querySelector(".scroll_list");
+const scrollListWidthEl = scrollListEl.scrollWidth;
+document.querySelector("#next_btn").addEventListener("click", function () {
+  scrollListEl.scroll({
+    left: scrollListWidthEl,
+    behavior: "smooth",
+  });
+});
+document.querySelector("#prev_btn").addEventListener("click", function () {
+  scrollListEl.scroll({
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
+// 앨범 커버 누르면 유튜브로 이동
 const imgEl = document.querySelectorAll(".rank_div > .text_div > div > img");
 const iEl = document.querySelectorAll(".rank_div > .text_div > div > i");
-
 for (let i = 0; i < 5; i++) {
   imgEl[i].addEventListener("mouseover", function () {
     iEl[i].style.opacity = 1;

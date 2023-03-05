@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
 
 p {
   margin: 0;
@@ -23,6 +25,7 @@ p {
     color: darkslateblue;
     text-shadow: 3px 4px lightgrey;
     font-weight: 700;
+
     font-family: 'Montserrat', sans-serif;
 
   }
@@ -91,7 +94,9 @@ p {
         white-space: nowrap;
         word-break: break-all;
         width: 200px;
+
         font-family: 'Montserrat', sans-serif;
+
       }
       .songName {
         font-size: 23px;
@@ -103,7 +108,9 @@ p {
         white-space: nowrap;
         word-break: break-all;
         overflow: hidden;
+
         font-family: 'Montserrat', sans-serif;
+
       }
       .singerName {
         display: block;
@@ -114,7 +121,9 @@ p {
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
-        font-family: 'Montserrat', sans-serif;
+
+        font-family: "Montserrat", sans-serif;
+
         font-weight: 300;
       }
     }
@@ -128,6 +137,9 @@ p {
       color: orangered;
       cursor: pointer;
       // color: #4fcfd6;
+    }
+    .heartIcon.red {
+      color: orangered;
     }
   }
 }

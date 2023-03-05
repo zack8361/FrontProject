@@ -124,4 +124,7 @@ p {
   font-size: 30px;
   color: orangered;
   cursor: pointer;
+}
+.cardWrap .infoWrap .heartIcon.red {
+  color: orangered;
 }/*# sourceMappingURL=card.css.map */

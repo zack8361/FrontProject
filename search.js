@@ -89,6 +89,14 @@ for (let i = 0; i < rank.length; i++) {
     const heartIcon = document.createElement("div");
     heartIcon.classList.add("heartIcon");
 
+    heartIcon.addEventListener("click", function () {
+      if (heartIcon.classList.contains("red")) {
+        heartIcon.classList.remove("red");
+      } else {
+        heartIcon.classList.add("red");
+      }
+    });
+
     cardmodal.append(cardWrap);
     cardWrap.append(rankNum);
     cardWrap.append(imgWrap);
@@ -235,6 +243,14 @@ input2.addEventListener("keyup", function (e) {
       //12 하트아이콘랩
       const heartIcon = document.createElement("div");
       heartIcon.classList.add("heartIcon");
+
+      heartIcon.addEventListener("click", function () {
+        if (heartIcon.classList.contains("red")) {
+          heartIcon.classList.remove("red");
+        } else {
+          heartIcon.classList.add("red");
+        }
+      });
 
       cardmodal.append(cardWrap);
       cardWrap.append(rankNum);
@@ -383,6 +399,14 @@ input2.addEventListener("keyup", function (e) {
       //12 하트아이콘랩
       const heartIcon = document.createElement("div");
       heartIcon.classList.add("heartIcon");
+
+      heartIcon.addEventListener("click", function () {
+        if (heartIcon.classList.contains("red")) {
+          heartIcon.classList.remove("red");
+        } else {
+          heartIcon.classList.add("red");
+        }
+      });
 
       cardmodal.append(cardWrap);
       cardWrap.append(rankNum);

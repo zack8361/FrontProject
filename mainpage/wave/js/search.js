@@ -88,6 +88,7 @@ for (let i = 0; i < rank.length; i++) {
     const heartIcon = document.createElement("div");
     heartIcon.classList.add("heartIcon");
 
+
     heartIcon.addEventListener("click", function () {
       if (heartIcon.classList.contains("red")) {
         heartIcon.classList.remove("red");
@@ -95,6 +96,7 @@ for (let i = 0; i < rank.length; i++) {
         heartIcon.classList.add("red");
       }
     });
+
 
     cardmodal.append(cardWrap);
     cardWrap.append(rankNum);

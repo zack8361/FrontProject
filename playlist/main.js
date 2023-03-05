@@ -95,9 +95,7 @@ const musicList = document.querySelector(".music__list");
 const musicListUl = musicList.querySelector(".list ul");
 const MusicListBtn = musicWrap.querySelector("#control-list");
 const lp = document.querySelector("figure section article .inner .lp");
-const turntable = document.querySelector(
-  "figure section article .inner .turntable"
-);
+const turntable = document.querySelector("figure section article .inner .turntable");
 const bgVideoUl = document.querySelector(".bg_video ul");
 const bgVideoLi = document.querySelectorAll(".bg_video ul li");
 let musicIndex = 1;

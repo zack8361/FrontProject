@@ -260,7 +260,7 @@
           <button id="btn_dance">댄스</button>
           <button id="btn_rap">랩/힙합</button>
           <button id="btn_rb">R&B/SOUL</button>
-
+          <!-- 캘린더 -->
           <div class="calendar">
             <div class="upper">
               <div id="month"></div>
@@ -275,10 +275,7 @@
 
         <div id="rank_inner_1">
           <div class="rank_div">
-            <div class="text_div">
-              <h1>01</h1>
-              <!-- <i class="fa-brands fa-youtube"></i> -->
-            </div>
+            <div class="text_div"><h1>01</h1></div>
           </div>
           <div class="rank_div">
             <div class="text_div"><h1>02</h1></div>
@@ -372,13 +369,22 @@
       <div class="inner_2">
         <div class="rank_list">
           <div class="top50_top">
-            <h1>
-              Top 50&nbsp;
+            <h1>Top 50&nbsp; <img src="../music-chart/img/chart_img.png" /></h1>
+            <div class="clock">
+              <i class="fa-regular fa-clock"></i>
               <h2></h2>
-            </h1>
+            </div>
           </div>
 
           <ul class="scroll_list">
+            <div class="next_prev_btn">
+              <button id="prev_btn" onclick="moveScrollLeft()">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+              </button>
+              <button id="next_btn" onclick="moveScrollRight()">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </button>
+            </div>
             <li class="list_item">
               <ul class="first_list_ul"></ul>
               <ul class="second_list_ul"></ul>

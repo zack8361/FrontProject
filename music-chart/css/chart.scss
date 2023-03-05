@@ -47,11 +47,11 @@ $left-primary-font: "Nunito", sans-serif;
 $primary-font: sans-serif;
 $secondary-font: "Oswald", sans-serif;
 $white: #fff;
+
 body {
   -ms-overflow-style: none;
   background: linear-gradient(25deg, #c9d6ff, #e2e2e2, #7b94e6);
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -142,7 +142,6 @@ body {
       padding: 12px;
       transition: 0.3s;
       z-index: 1;
-
       &:hover {
         background-color: #fff;
         color: black;
@@ -153,7 +152,6 @@ body {
   /* 오른쪽 하단 카드 / 팝업 */
   .popupVideo {
     height: 40vh;
-    // margin: 0px -150px 0 0;
     display: flex;
     align-self: flex-end;
     z-index: 1;
@@ -237,16 +235,13 @@ body {
   .leftBox {
     display: flex;
     padding-left: 40px;
-
     .homeIcon {
       font-size: 28px;
       padding-right: 30px;
-
       i {
         color: #888;
       }
     }
-
     .searchWrap {
       position: relative;
       display: flex;
@@ -319,7 +314,6 @@ body {
       position: relative;
       display: inline-flex;
       align-items: center;
-
       h1 {
         word-break: break-all;
         white-space: nowrap;
@@ -478,10 +472,6 @@ body {
               cursor: pointer;
               &:hover {
                 opacity: 0.5;
-                // /*rgb컬러a알파 0~1까지 화이트 0.3만큼 알파 혹은 반투명*/
-                // background: rgba(255, 0, 0, 0.3);
-                // /* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
-                // transition: background 1s ease-out;
               }
             }
             i {
@@ -585,10 +575,6 @@ body {
               cursor: pointer;
               &:hover {
                 opacity: 0.5;
-                // /*rgb컬러a알파 0~1까지 화이트 0.3만큼 알파 혹은 반투명*/
-                // background: rgba(255, 0, 0, 0.3);
-                // /* 변형할 것은 배경 1초, 빠른 시작 서서히 감속*/
-                // transition: background 1s ease-out;
               }
             }
             i {
@@ -638,12 +624,12 @@ body {
 
   .inner_2 {
     position: relative;
-    width: 70vw;
+    width: 80vw;
     top: 50%;
     left: 50%;
     height: 65vh;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.288);
+    background-color: rgba(255, 255, 255, 0.615);
     border-radius: 20px;
     padding: 0 50px;
 
@@ -656,7 +642,7 @@ body {
         position: relative;
         display: inline-flex;
         align-items: baseline;
-        width: 60vw;
+        width: 70vw;
         left: 50%;
         transform: translateX(-50%);
         justify-content: space-between;
@@ -668,15 +654,20 @@ body {
           font-size: 45px;
           display: inline-flex;
           align-items: center;
-          // text-shadow: 2px 3px #ffffff68;
-          span {
-            color: #3a3a3a;
-            font-size: 25px;
-          }
         }
-        h2 {
-          font-family: "Orbitron";
-          color: #393939;
+        .clock {
+          display: flex;
+          font-size: 20px;
+          align-content: center;
+          i {
+            margin-right: 7px;
+            position: relative;
+            transform: translateY(10%);
+          }
+          h2 {
+            font-family: "Orbitron";
+            color: #393939;
+          }
         }
       }
 
@@ -684,13 +675,36 @@ body {
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+        transition: 0.5s;
+        .next_prev_btn {
+          display: flex;
+          justify-content: space-between;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 9;
+          width: 78vw;
+
+          #next_btn {
+            font-size: 35px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+          }
+          #prev_btn {
+            cursor: pointer;
+            font-size: 35px;
+            background-color: transparent;
+            border: none;
+          }
+        }
 
         .list_item {
           position: relative;
           display: flex;
           vertical-align: top;
-
-          // width: 400px;
           padding: 0;
           box-sizing: border-box;
           ul {
@@ -778,6 +792,7 @@ body {
   }
 }
 
+// 유튜브 모달창
 @keyframes popup {
   0% {
     bottom: 20px;

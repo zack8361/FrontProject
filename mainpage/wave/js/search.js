@@ -87,7 +87,9 @@ for (let i = 0; i < rank.length; i++) {
     //12 하트아이콘랩
     const heartIcon = document.createElement("div");
     heartIcon.classList.add("heartIcon");
-
+    //하트 색 변경
+    
+    
     cardmodal.append(cardWrap);
     cardWrap.append(rankNum);
     cardWrap.append(imgWrap);

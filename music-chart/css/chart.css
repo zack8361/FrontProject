@@ -641,11 +641,12 @@ body {
   display: flex;
   font-size: 20px;
   align-content: center;
+  align-items: center;
+  position: relative;
+  top: 15px;
 }
 .chart_section_2 .inner_2 .rank_list .top50_top .clock i {
-  margin-right: 7px;
-  position: relative;
-  transform: translateY(10%);
+  margin-right: 5px;
 }
 .chart_section_2 .inner_2 .rank_list .top50_top .clock h2 {
   font-family: "Orbitron";
@@ -663,7 +664,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
   z-index: 9;
   width: 78vw;
 }
@@ -673,12 +674,14 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.5s;
+  color: #393939;
 }
 .chart_section_2 .inner_2 .rank_list .scroll_list .next_prev_btn #prev_btn {
   cursor: pointer;
   font-size: 35px;
   background-color: transparent;
   border: none;
+  color: #393939;
 }
 .chart_section_2 .inner_2 .rank_list .scroll_list .list_item {
   position: relative;

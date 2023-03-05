@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
 p {
   margin: 0;
 }
@@ -9,14 +11,20 @@ p {
   border-radius: 25px;
   width: 300px;
   height: 400px;
-  background: linear-gradient(30deg, #005aa7, #cf8bf3, #fffde4);
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
+  border: 1px solid lightgray;
 
   .rankNum {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
     font-size: 40px;
-    color: #4fcfd6;
+    color: darkslateblue;
+    text-shadow: 3px 4px lightgrey;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+
   }
   .imgWrap {
     position: relative;
@@ -28,6 +36,7 @@ p {
       border-radius: 50%;
       border: none;
       overflow: hidden;
+      box-shadow: 5px 5px 5px rgb(0 0 0 / 30%);
       .albumImg {
         display: block;
         object-fit: cover;
@@ -42,11 +51,12 @@ p {
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background-color: #4fcfd6;
+      background-color: darkslateblue;
       z-index: 300;
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: 5px 5px 5px rgb(0 0 0 / 50%);
       .fa-play {
         display: block;
         font-size: 20px;
@@ -74,13 +84,14 @@ p {
         display: block;
         overflow: hidden;
         font-size: 14px;
-        color: lightgray;
-        font-weight: 200;
+        color: darkslategray;
+        font-weight: 300;
         margin-bottom: 5px;
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
         width: 200px;
+        font-family: 'Montserrat', sans-serif;
       }
       .songName {
         font-size: 23px;
@@ -92,16 +103,19 @@ p {
         white-space: nowrap;
         word-break: break-all;
         overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
       }
       .singerName {
         display: block;
         overflow: hidden;
         width: 180px;
-        color: lightgray;
+        color: darkslategray;
         font-size: 14px;
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
       }
     }
 
@@ -111,7 +125,7 @@ p {
       right: -30px;
       width: 30%;
       font-size: 30px;
-      color: white;
+      color: orangered;
       cursor: pointer;
       // color: #4fcfd6;
     }

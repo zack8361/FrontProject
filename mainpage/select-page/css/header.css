@@ -273,6 +273,7 @@ body {
   justify-content: space-around;
   display: flex;
   margin-right: 40px;
+  align-items: center;
 }
 .navbar .rightBox .qrIcon {
   font-size: 28px;

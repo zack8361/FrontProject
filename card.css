@@ -1,19 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
 p {
   margin: 0;
 }
 
 .cardWrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
   border-radius: 25px;
   width: 300px;
   height: 400px;
-  background: linear-gradient(30deg, #005aa7, #cf8bf3, #fffde4);
+  background-color: whitesmoke;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid lightgray;
 }
 .cardWrap .rankNum {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
   font-size: 40px;
-  color: #4fcfd6;
+  color: darkslateblue;
+  text-shadow: 3px 4px lightgrey;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
 .cardWrap .imgWrap {
   position: relative;
@@ -26,6 +35,7 @@ p {
   border-radius: 50%;
   border: none;
   overflow: hidden;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 .cardWrap .imgWrap .albumWrap .albumImg {
   display: block;
@@ -41,60 +51,80 @@ p {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-color: #4fcfd6;
+  background-color: darkslateblue;
   z-index: 300;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-.cardWrap .imgWrap .iconBack .playBtn {
+.cardWrap .imgWrap .iconBack .fa-play {
   display: block;
   font-size: 20px;
   color: white;
+  cursor: pointer;
 }
 .cardWrap .infoWrap {
   position: relative;
   display: flex;
   height: 120px;
+  width: 100%;
 }
 .cardWrap .infoWrap .music_Singer_Album {
   padding-top: 10px;
   width: 70%;
   height: 120px;
   margin-left: 40px;
-}
-.cardWrap .infoWrap .music_Singer_Album .albumName {
-  font-size: 14px;
-  color: lightgray;
-  font-weight: 200;
-  margin-bottom: 5px;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
 }
+.cardWrap .infoWrap .music_Singer_Album .albumName {
+  display: block;
+  overflow: hidden;
+  font-size: 14px;
+  color: darkslategray;
+  font-weight: 300;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  width: 200px;
+  font-family: "Montserrat", sans-serif;
+}
 .cardWrap .infoWrap .music_Singer_Album .songName {
-  text-align: center;
-  font-size: 40px;
+  font-size: 23px;
   margin-right: 5px;
-  width: 85px;
+  width: 200px;
   margin-top: 5px;
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 .cardWrap .infoWrap .music_Singer_Album .singerName {
-  color: lightgray;
+  display: block;
+  overflow: hidden;
+  width: 180px;
+  color: darkslategray;
   font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 .cardWrap .infoWrap .heartIcon {
   position: absolute;
-  top: 30%;
-  right: -25px;
+  top: 38%;
+  right: -30px;
   width: 30%;
-  font-size: 35px;
+  font-size: 30px;
   color: white;
+  cursor: pointer;
+}
+.cardWrap .infoWrap .heartIcon.red {
+  color: orangered;
 }/*# sourceMappingURL=card.css.map */

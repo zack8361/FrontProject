@@ -19,7 +19,6 @@ a {
 @font-face {
   font-family: "NEXON Lv2 Gothic";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -36,7 +35,6 @@ a {
 @font-face {
   font-family: "NanumSquareNeo-Variable";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2") format("woff2");
-
   font-weight: normal;
   font-style: normal;
 }
@@ -78,13 +76,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   height: 70vh;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-
 }
 .main_section .left__container .left__text-sm {
   font-family: "Nunito", sans-serif;
